@@ -1,0 +1,78 @@
+Dòng công việc này sẽ xây dựng và đẩy ứng dụng Node.js vào ứng dụng web Azure khi cam kết được đẩy vào chi nhánh mặc định của bạn.
+#
+Dòng công việc này giả định bạn đã tạo ứng dụng web Dịch vụ ng dụng Azure mục tiêu.
+# For instructions see https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabsullahinux #
+#
+# Để cấu hình dòng công việc này:
+#
+Tải xuống hồ sơ xuất bản cho ứng dụng web Azure của bạn. Bạn có thể tải xuống tệp này từ trang Tổng quan của ứng dụng web của mình trong cổng Azure.
+# Để biết thêm thông tin: https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs -applevel#generate-deployment-credentials
+#
+# 2. Tạo ra một bí mật trong kho lưu trữ của bạn tên là AZURE CompikingWEBAPP ^ QielISH ^ “TING PHBROFILE, paste the published profile contents as the value of the secret.
+# For instructions on obtaining the publish profile see: https://docs.microsoft.com/azure/app-service/deploy-github-actions#configure-the-github-secret #
+#
+Thay đổi trị giá cho AZURE QiderWEBAPP -Mike. Tùy chọn chọn đổi AZURE ^ “Weporipdded Incrateraterate ^ “ NODE megawattVERSION environment variables below.
+#
+# Để biết thêm thông tin về GitHub Actions for Azure: https://github.com/Azure/Actions #
+# Để biết thêm thông tin về hành động Azure Web Apps Deploy: https://github.com/Azure/webapps-deploy
+Để có thêm các mẫu để bắt đầu với dòng công việc hành động GitHub để triển khai đến Azure: https://github.com/Azure/actions-workflow-samples #
+
+Lên:
+                                                        Rặn đi:                                                        
+ Cành cây: [mainphamy1222" 
+                                                        Dòng chảy công việc bị bắt:                                                        
+
+Không!
+ Azores ... 
+ Azure ATppingwebapp ^ “The Intercate CompureComuting –” (bằng tiếng Anh). 
+ NODE -[TING TING TING THO: '14. X' Set this to the node version to use 
+
+Giấy phép:
+                                                      Nội dung: đọc                                                      
+
+Công việc:
+                                                  Không!                                                  
+ Chạy: ubuntu-latest 
+                                                 Bước:                                                 
+                                                 - Hành động/kiểm tra lại                                                 
+
+                                                - Đặt tên: Cài đặt Node.js                                                
+                                               Sử dụng: Hành động / Thiết lập - Nodepakv3                                               
+                                              Với:                                              
+                                           Chuyển đổi tên: $Tabsiteri env. NODE PHN                                           
+                                            Bộ nhớ cache: 'Npm'                                            
+
+                                            - Tên: NPM Cài đặt, xây dựng và thử nghiệm                                            
+                                           Chạy: Tiểu vương quốc                                           
+                                          Cài đặt NPM                                          
+ NPM Run Build - nếu-nay 
+                                          Kiểm tra NPM chạy - nếu-nay                                          
+
+                                         - Tên: Tải lên hiện vật để triển khai                                         
+                                         Sử dụng: Hành động / nâng cao cao cao - Mực dụng                                         
+                                        Với:                                        
+ Tên: node-app 
+                                        Đường: .                                        
+
+                                       Triển khai:                                       
+                                       Giấy phép:                                       
+                                       Nội dung: không                                       
+ Chạy: ubuntu-latest 
+                                       Nhu cầu: xây dựng                                       
+                                       Môi trường:                                       
+                                       Tên: Phát triển                                       
+                                    Điều tra - tính toán đến ứng dụng.outputs.webapp-url -Bul -                                    
+
+                                       Bước:                                       
+                                     Tải xuống hiện vật từ công việc xây dựng                                     
+                                     Sử dụng: Hành động / chất lượng-artifact ^ “Commple -Artifact                                     
+                                    Với:                                    
+ Tên: node-app 
+
+ - Tên: "Tỷ dụng web Azure" 
+                                  ID: triển khai đến webapp                                  
+ Sử dụng: Azure/Webapps-Deployting 
+                                Với:                                
+ Tên ứng dụng ứng dụng: Compurecnv $ Compurecnv. AZURE Compiting 
+                               Xuất bản nổi tiếng: Những bí mật của Lasera, Azure Lại Lạiwebapp                               
+ Gói: 
